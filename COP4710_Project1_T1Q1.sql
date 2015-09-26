@@ -1,4 +1,8 @@
-﻿CREATE TABLE Readers (
+-- Task 1: Create a small library database using PostgreSQL.
+-- Query 1: Create the tables with the proper constraints and make sure both
+-- primary keys and foreign keys are specified.
+
+CREATE TABLE Readers (
         reader_id integer PRIMARY KEY,
         reader_f text,
         reader_l text,
@@ -36,6 +40,6 @@ CREATE TABLE LoanList (
         PRIMARY KEY (isbn, copy_id),
         FOREIGN KEY (isbn) REFERENCES Books (isbn),
         FOREIGN KEY (reader_id) REFERENCES Readers (reader_id),
-        FOREIGN KEY (isbn, copy_id) REFERENCES Copies (isbn, copy_id)
+        FOREIGN KEY (isbn, copy_id) REFERENCES Copies (isbn, copy_id) -- Need to references isbn again since it's also mentioned in Copies, and that's where copy_id is located.
 
 );

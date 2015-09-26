@@ -1,4 +1,7 @@
-INSERT INTO Readers (reader_id, reader_f, date_of_birth, reader_l, address, phone) VALUES
+-- Task 1: Create a small library database using PostgreSQL.
+-- Query 2: Insert data into the table.
+
+INSERT INTO Readers (reader_id, reader_f, reader_l, date_of_birth, address, phone) VALUES
 (1, 'Jennifer', 'Stuart', '06/15/1977', '101 S.W. 8 ST.', '305-215-5011'),
 (2, 'Alex', 'Weiss', '04/24/1980', '1443 N.W. 7 ST.', '786-289-0000'),
 (3, 'David','So','11/08/1990','3500 W. Flagler ST.','305-511-1234'),
