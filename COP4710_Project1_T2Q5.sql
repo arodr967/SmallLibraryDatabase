@@ -1,4 +1,4 @@
 -- Task 2: Managing the database using PostgreSQL.
--- Query 1: Change the check constraint in the table Books to constraint the entire price less than 15
+-- Query 5: Change the check constraint in the table Books to constraint the entire price less than 15
 
-UPDATE Books SET price = (price > 0 AND price < 10);
+UPDATE Books SET price = (price > 0 AND price < 15);
