@@ -40,6 +40,9 @@ CREATE TABLE LoanList (
         PRIMARY KEY (isbn, copy_id),
         FOREIGN KEY (isbn) REFERENCES Books (isbn),
         FOREIGN KEY (reader_id) REFERENCES Readers (reader_id),
-        FOREIGN KEY (isbn, copy_id) REFERENCES Copies (isbn, copy_id) -- Need to references isbn again since it's also mentioned in Copies, and that's where copy_id is located.
+        FOREIGN KEY (isbn) REFERENCES Copies (isbn),
+        FOREIGN KEY (copy_id) REFERENCES Copies (copy_id)
+                            -- Need to references isbn again since it's also
+                            -- mentioned in Copies, and that's where copy_id is located.
 
 );
