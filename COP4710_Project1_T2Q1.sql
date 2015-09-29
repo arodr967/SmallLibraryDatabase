@@ -7,4 +7,4 @@ INSERT INTO LoanList (isbn, reader_id, copy_id, out_date, due_date, in_date) VAL
 -- An error occurs when the copy_id of isbn: 0375842209, is 1 because it violates the unique constraint. 
 -- In order to fix this, we must add the isbn: 0375842209 after Query 2 is performed, when all of the
 -- not Null, in_dates are deleted. Therefore, we are able to add that book to the LoanList because
--- copy_id 1, was used but then already returned before being checked out again.
+-- copy_id 1, has already been returned before being checked out again.
